@@ -49,7 +49,7 @@ canvas {
     justify-content: space-between;
 }
 
-#headermobile {
+#header-mobile {
     display: none;
     position: fixed;
     top: 0;
@@ -62,7 +62,7 @@ canvas {
     justify-content: space-between;
 }
 
-.headercontent {
+.header-content {
     width: 30vw;
     height: 80%;
     display: flex;
@@ -70,35 +70,32 @@ canvas {
     justify-content: center;
 }
 
-#headerlogo {
-}
-
-#headermenu {
+#header-menu {
     display: flex;
     align-items:center;
     justify-content:center;
     font-size: 14px; /* 12px at 360, 16px at 1920 */   
 }
 
-#headerlang {
+#header-lang {
     font-size: 14px;
     display: flex;
     align-items:center;
     justify-content:center;
 }
 
-#headermenumobile {
+#header-menu-mobile {
     display: flex;
     flex-direction:column;
     align-items:center;
     justify-content:space-around;
 }
 
-#headerlogomobile {
+#header-logo-mobile {
     margin-left: 2rem;
 }
 
-.headermenumobilebar {
+.header-menu-mobile-bar {
     width: 30px; 
     height:2px; 
     background-color: white; 
@@ -111,7 +108,7 @@ canvas {
     #header {
         display: none;
     }
-    #headermobile {
+    #header-mobile {
         display: flex;
     }
 }
@@ -126,9 +123,13 @@ canvas {
     justify-content: center;
 }
 
-#Krust {
-    /*background-image:url("./Krust_slow1.png");
-    background-position: center;*/
+.page-long {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
 }
 
 #About01 {
@@ -161,49 +162,87 @@ canvas {
 
 /* PAGE CONTENT */
 
-.contentheader {
-    margin: 0.2rem;
-    font-size: 52px;
-}
-
-.contentdesc {
+.content-desc {
     width: 45%;
     font-family:"Kakaosmalllight";
-    font-size: 16px;
 }
 
 .klaytn-desc {
-    font-size: 16px;
     width: 35%;
     color: #969696;
     font-family:"Kakaosmalllight";
-    font-size: 16px;
 }
 
 .klaytn-learnmore {
     color: #4D69E4;
-    font-size: 16px;
+}
+
+.locations {
+    height: 40%;
+    margin: 5%;
+}
+
+.location-descriptions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @media only screen and (max-width: 768px) {
-    .contentheader {
-        font-size: 30px;
+    .page-long {
+        height: auto;
     }
-    .contentdesc {
+    .content-desc {
         width: 80%;
-        font-size: 14px;
     }
     .klaytn-desc {
         width: 80%;
-        font-size: 14px;
     }
-    .klaytn-learnmore {
-        font-size: 14px;
+    .locations {
+        height: auto;
+        width: 80%;
+    }
+    .location-descriptions {
+        flex-direction: column;
+    }
+    .location-desc {
+        margin:2rem;
     }
 }
 
 /* FONT SIZES */
-h2, h3, h4, p, li{
+.mini-heading {
+    font-size: 18px;
+    margin: 2rem;
+    font-family: "Kakaosmallbold";
+    color: #969696;
+}
+
+.heading-med {
+    margin: 0.2rem;
+    font-size: 52px;
+}
+
+.heading-big {
+    font-size: 60px;
+}
+
+.plain-text {
+    font-size: 14px;
+}
+
+.bold {
+    font-family: "Kakaosmallbold";
+}
+
+h2, h4, p, li{
     margin: 1rem;
 }
 
@@ -212,18 +251,9 @@ h2 {
     font-size: 16px;
 }
 
-h3 {
-    font-family:"Kakaosmalllight";
-    font-size: 16px;
-}
-
 h5 {
     font-size: 14px;
     margin:0.1rem;
-}
-
-.bold {
-    font-family: "Kakaosmallbold";
 }
 
 a {
@@ -231,6 +261,17 @@ a {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 768px) {
+    .plain-text {
+        font-size: 12px;
+    }
+    .heading-med {
+        font-size: 30px;
+    }
+    .heading-big {
+        font-size: 36px;
+    }
+}
 
 /*
 Extra small devices (phones, 600px and down)
@@ -248,3 +289,15 @@ Extra small devices (phones, 600px and down)
 /* Extra large devices (large laptops and desktops, 1200px and up)
 @media only screen and (min-width: 1200px) {...}
 */
+
+#menu-mobile {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background-color: #141312;
+    background-color: rgba(20, 19, 18, 1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

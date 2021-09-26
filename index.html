@@ -7,88 +7,124 @@
         <title>Krust</title>
         <link rel="shortcut icon" type="image/jpg" href="./img/fav.png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script>
+            function toggleMobileMenu() {
+                var x = document.getElementById("menu-mobile");
+                if (x.style.display === "flex") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "flex";
+                }
+            }
+        </script>
     </head>
     <body>
         <div id="header">
-            <div class="headercontent" id="headerlogo">
+            <div class="header-content">
                 <a href="#Krust"><img style="height:28px;" src="./img/Krust_Logotype_W.png"/></a>
             </div>
-            <div class="headercontent" id="headermenu">
+            <div class="header-content" id="header-menu">
                 <a href="#About01"><h2>About</h2></a>
                 <a href="#Klaytn"><h2>Klaytn</h2></a>
                 <a href="#Careers"><h2>Careers</h2></a>
                 <a href="#Contact"><h2>Contact</h2></a>
             </div>
-            <div class="headercontent" id="headerlang">
+            <div class="header-content" id="header-lang">
                 <h5>KO</h5>
                 <h5>|</h5>
                 <h5>EN</h5>
             </div>
         </div>
-        <div id="headermobile">
-            <div id="headerlogomobile">
+        <div id="header-mobile">
+            <div id="header-logo-mobile">
                 <a href="#Krust"><img style="height:28px;" src="./img/Krust_Logotype_W.png"/></a>
             </div>
-            <div id="headermenumobile">
-                <span class="headermenumobilebar"></span>
-                <span class="headermenumobilebar"></span>
-                <span class="headermenumobilebar"></span>
+            <div id="header-menu-mobile" onclick="toggleMobileMenu()">
+                <span class="header-menu-mobile-bar"></span>
+                <span class="header-menu-mobile-bar"></span>
+                <span class="header-menu-mobile-bar"></span>
             </div>
+        </div>
+        <div id="menu-mobile">
+            <a href="#About01"><h2 onclick="toggleMobileMenu()">About</h2></a>
+            <a href="#Klaytn"><h2 onclick="toggleMobileMenu()">Klaytn</h2></a>
+            <a href="#Careers"><h2 onclick="toggleMobileMenu()">Careers</h2></a>
+            <a href="#Contact"><h2 onclick="toggleMobileMenu()">Contact</h2></a>
         </div>
         <div class="page" id="Krust">
             <img style="height:100%;" src="img/Krust.gif"/>
         </div>
         <div class="page" id="About01">
-            <h5>01</h5>
-            <div class="contentheader">
+            <div class="mini-heading">01</div>
+            <div class="heading-med">
                 We incubate
                 <div class="bold">global services</div>
             </div>
-            <div class="contentdesc">
+            <div class="content-desc plain-text">
                 Krust incubates innovative startups that are building the next generation of groundbreaking technology applications. By enabling their growth and supporting their global expansion, we aim to contribute to the innovation of humanity.
             </div>
         </div>
         <div class="page" id="About02">
-            <h5>02</h5>
-            <div class="contentheader">
+            <div class="mini-heading">02</div>
+            <div class="heading-med ">
                 We invest in
                 <div class="bold">the future</div>
             </div>
-            <div class="contentdesc">
+            <div class="content-desc plain-text">
                 Krust invests in early and growth stage startups with global potential. We look to not only invest but also create a partnership and facilitate the growth of these startups into world-class businesses.
             </div>
         </div>
         <div class="page" id="About03">
-            <h5>03</h5>
-            <div class="contentheader">
+            <div class="mini-heading">03</div>
+            <div class="heading-med">
                 We invigorate the
                 <div class="bold">Klaytn ecosystem</div>
             </div>
-            <div class="contentdesc">
+            <div class="content-desc plain-text">
                 Krust leads Kakao's global business with a focus on innovative technologies such as blockchain and artificial intelligence. We are working closely with the Klaytn Foundation in the blockchain sector and aim to expand the Klaytn ecosystem proactively and systematically.
             </div>
         </div>
         <div class="page" id="Klaytn">
-            <h5>Klaytn</h5>
-            <div class="contentheader">
+            <div class="mini-heading">Klaytn</div>
+            <div class="heading-big">
                 <div class="bold">What is Klaytn?</div>
             </div>
-            <div class="klaytn-desc">
+            <div class="klaytn-desc plain-text">
                 Klaytn is a service-centric blockchain platform providing an intuitive development environment and friendly end-user experience. It is built upon solid reliability and significant stability with substantial service development for mass adoption.
             </div>
-            <div class="klaytn-learnmore">Learn More About Klaytn-></div>
+            <div class="klaytn-learnmore"><a href="https://www.klaytn.com/" target="_blank">Learn More About Klaytn-></a></div>
         </div>
         <div class="page" id="Careers">
-            <h5>Careers</h5>
-            <div class="contentheader">
-                <div class="bold">Discover how you can make an impact.</div>
+            <div class="mini-heading">Careers</div>
+            <div class="heading-big">
+                <div class="bold">Discover how</div>
+                <div class="bold">you can make an impact.</div>
             </div>
-            <div class="contentdesc">
+            <div class="content-desc plain-text">
                 Join us at Krust.
             </div>
         </div>
-        <div class="page" id="Contact">
-            <h5>Contact</h5>
+        <div class="page-long" id="Contact">
+            <div class="mini-heading">Contact</div>
+            <img class="locations" src="./img/Locations.png"/>
+            <div class="location-descriptions">
+                <div class="location-desc">
+                    <img style="width:20px;" src="./img/locations/1-num.png"/>
+                    <img style="width: 200px;" src="./img/locations/1-text.png"/>
+                </div>
+                <div class="location-desc">
+                    <img style="width:20px;" src="./img/locations/2-num.png"/>
+                    <img style="width: 200px;" src="./img/locations/2-text.png"/>
+                </div>
+                <div class="location-desc">
+                    <img style="width:20px;" src="./img/locations/3-num.png"/>
+                    <img style="width: 200px;" src="./img/locations/3-text.png"/>
+                </div>
+                <div class="location-desc">
+                    <img style="width:20px;" src="./img/locations/4-num.png"/>
+                    <img style="width: 200px;" src="./img/locations/4-text.png"/>
+                </div>
+            </div>
         </div>
     </body>
 </html>
