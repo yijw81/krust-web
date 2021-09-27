@@ -28,7 +28,8 @@ body {
     background-color: rgba(20, 19, 18, 1);
     font-family: "Kakaosmalllight";
     color: white;
-    text-align:center;
+    text-align: center;
+    overflow-x: hidden;
 }
 
 canvas {
@@ -273,6 +274,18 @@ a {
     }
 }
 
+#menu-mobile {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background-color: #141312;
+    background-color: rgba(20, 19, 18, 1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /*
 Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {...}
@@ -290,14 +303,3 @@ Extra small devices (phones, 600px and down)
 @media only screen and (min-width: 1200px) {...}
 */
 
-#menu-mobile {
-    position: fixed;
-    top: 80px;
-    width: 100%;
-    background-color: #141312;
-    background-color: rgba(20, 19, 18, 1);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
