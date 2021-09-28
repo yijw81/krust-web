@@ -48,6 +48,7 @@ canvas {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    z-index: 100;
 }
 
 #header-mobile {
@@ -90,6 +91,7 @@ canvas {
     flex-direction:column;
     align-items:center;
     justify-content:space-around;
+    z-index: 100;
 }
 
 #header-logo-mobile {
@@ -103,6 +105,19 @@ canvas {
     margin-bottom: 6px; 
     margin-right: 2rem;
     border-radius: 2px;
+}
+
+#menu-mobile {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    background-color: #141312;
+    background-color: rgba(20, 19, 18, 1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
 }
 
 @media only screen and (max-width: 768px) {
@@ -122,6 +137,7 @@ canvas {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .page-long {
@@ -132,6 +148,7 @@ canvas {
     align-items: center;
     justify-content: center;
 }
+
 
 #About01 {
     background-image:url("./img/Page2BG.png");
@@ -159,6 +176,13 @@ canvas {
     background-position-x: -111px;
     background-position-y: 162px;
     background-repeat: no-repeat;
+}
+
+#Careers {
+    background-image:url("./img/PageCareersBG.png");
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* PAGE CONTENT */
@@ -196,6 +220,15 @@ canvas {
     align-items: flex-start;
 }
 
+.vid-pc {
+    display: block;
+
+}
+
+.vid-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     .page-long {
         height: auto;
@@ -215,6 +248,13 @@ canvas {
     }
     .location-desc {
         margin:2rem;
+    }
+    .vid-pc {
+        display: none;
+    
+    }
+    .vid-mobile {
+        display: block;
     }
 }
 
@@ -262,6 +302,12 @@ a {
     text-decoration: none;
 }
 
+.lang-button {
+    font-size: 14px;
+    margin:0.1rem;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
     .plain-text {
         font-size: 12px;
@@ -274,16 +320,27 @@ a {
     }
 }
 
-#menu-mobile {
-    position: fixed;
-    top: 80px;
-    width: 100%;
-    background-color: #141312;
-    background-color: rgba(20, 19, 18, 1);
-    display: none;
-    flex-direction: column;
+
+
+.button-main {
+    background-color:white;
+    color: #4D69E4;
+    width: 150px;
+    height: 40px;
+    display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
+    border-radius: 10px;
+    font-size: 12px;
+    margin: 1rem;
+}
+
+.kr {
+    display: none;
+}
+
+.en {
+    display: block;
 }
 
 /*

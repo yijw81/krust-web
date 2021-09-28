@@ -16,12 +16,41 @@
                     x.style.display = "flex";
                 }
             }
+            
+            function closeMobileMenu() {
+                var x = document.getElementById("menu-mobile");
+                x.style.display = "none";
+            }
+
+            function changeVisibility(_list, _str) {
+                for (var i = 0; i < _list.length; i++) {
+                    var x = _list.item(i);
+                    x.style.display = _str;
+                }
+            }
+
+            function changeLang(_langfrom, _langto) {
+                var from = document.getElementsByClassName(_langfrom);
+                var to = document.getElementsByClassName(_langto);
+                changeVisibility(to, "block");
+                changeVisibility(from, "none");
+            }
+
+            function changeLangToEn() {
+                changeLang("kr", "en");
+            }
+
+            function changeLangToKr() {
+                changeLang("en", "kr");
+            }
         </script>
     </head>
     <body>
         <div id="header">
             <div class="header-content">
-                <a href="#Krust"><img style="height:28px;" src="./img/Krust_Logotype_W.png"/></a>
+                <a href="#Krust">
+                    <img style="height:28px;" src="./img/Krust_Logotype_W.png"/>
+                </a>
             </div>
             <div class="header-content" id="header-menu">
                 <a href="#About01"><h2>About</h2></a>
@@ -30,13 +59,13 @@
                 <a href="#Contact"><h2>Contact</h2></a>
             </div>
             <div class="header-content" id="header-lang">
-                <h5>KO</h5>
+                <div class="lang-button" onclick="changeLangToKr()">KO</div>
                 <h5>|</h5>
-                <h5>EN</h5>
+                <div class="lang-button" onclick="changeLangToEn()">EN</div>
             </div>
         </div>
         <div id="header-mobile">
-            <div id="header-logo-mobile">
+            <div id="header-logo-mobile" onclick="closeMobileMenu()">
                 <a href="#Krust"><img style="height:28px;" src="./img/Krust_Logotype_W.png"/></a>
             </div>
             <div id="header-menu-mobile" onclick="toggleMobileMenu()">
@@ -46,13 +75,21 @@
             </div>
         </div>
         <div id="menu-mobile">
-            <a href="#About01"><h2 onclick="toggleMobileMenu()">About</h2></a>
-            <a href="#Klaytn"><h2 onclick="toggleMobileMenu()">Klaytn</h2></a>
-            <a href="#Careers"><h2 onclick="toggleMobileMenu()">Careers</h2></a>
-            <a href="#Contact"><h2 onclick="toggleMobileMenu()">Contact</h2></a>
+            <a href="#About01"><h2 onclick="closeMobileMenu()">About</h2></a>
+            <a href="#Klaytn"><h2 onclick="closeMobileMenu()">Klaytn</h2></a>
+            <a href="#Careers"><h2 onclick="closeMobileMenu()">Careers</h2></a>
+            <a href="#Contact"><h2 onclick="closeMobileMenu()">Contact</h2></a>
         </div>
         <div class="page" id="Krust">
-            <img style="height:100%;" src="img/Krust.gif"/>
+            <!--<img style="height:100%;" src="img/Krust.gif"/>-->
+            <video class="vid-pc" height="100%" autoplay muted> 
+                <source src="./Krust_video-pc.mp4" type="video/mp4">
+                Please check your browser, your browser does not support the video tag.
+            </video>
+            <video class="vid-mobile" height="100%" autoplay muted> 
+                <source src="./Krust_video-m.mp4" type="video/mp4">
+                Please check your browser, your browser does not support the video tag.
+            </video>
         </div>
         <div class="page" id="About01">
             <div class="mini-heading">01</div>
@@ -60,8 +97,11 @@
                 We incubate
                 <div class="bold">global services</div>
             </div>
-            <div class="content-desc plain-text">
+            <div class="content-desc plain-text en">
                 Krust incubates innovative startups that are building the next generation of groundbreaking technology applications. By enabling their growth and supporting their global expansion, we aim to contribute to the innovation of humanity.
+            </div>
+            <div class="content-desc plain-text kr">
+                Krust는 다음 세대의 획기적인 기술들을 이용한 어플리케이션을 만드는 혁신적인 스타트업들을 인큐베이팅 합니다. 이들의 성장과 글로벌 확장을 가능하게 함으로써 인류의 혁신에 기여하고자 합니다.
             </div>
         </div>
         <div class="page" id="About02">
@@ -70,8 +110,11 @@
                 We invest in
                 <div class="bold">the future</div>
             </div>
-            <div class="content-desc plain-text">
+            <div class="content-desc plain-text en">
                 Krust invests in early and growth stage startups with global potential. We look to not only invest but also create a partnership and facilitate the growth of these startups into world-class businesses.
+            </div>
+            <div class="content-desc plain-text kr">
+                Krust는 글로벌 확장성의 잠재력을 갖춘 Early Stage와 Growth Stage의 스타트업을 발굴합니다. 우리는 투자뿐만 아니라 기업간의 파트너쉽을 영위하며 성장을 지원함으로써, 세계적 기업으로의 발돋움에 도움이 되고자 합니다.             
             </div>
         </div>
         <div class="page" id="About03">
@@ -80,8 +123,11 @@
                 We invigorate the
                 <div class="bold">Klaytn ecosystem</div>
             </div>
-            <div class="content-desc plain-text">
+            <div class="content-desc plain-text en">
                 Krust leads Kakao's global business with a focus on innovative technologies such as blockchain and artificial intelligence. We are working closely with the Klaytn Foundation in the blockchain sector and aim to expand the Klaytn ecosystem proactively and systematically.
+            </div>
+            <div class="content-desc plain-text kr">
+                Krust는 카카오의 글로벌 비즈니스를 주도하며 블록체인, 인공지능 등의 혁신적인 기술에 중점을 두고 있습니다. 블록체인 부분에서는 Klaytn 재단과 긴밀한 관계를 유지하며 주도적이고 체계적으로 Klaytn 생태계를 확장하려 합니다.
             </div>
         </div>
         <div class="page" id="Klaytn">
@@ -89,19 +135,48 @@
             <div class="heading-big">
                 <div class="bold">What is Klaytn?</div>
             </div>
-            <div class="klaytn-desc plain-text">
+            <div class="klaytn-desc plain-text en">
                 Klaytn is a service-centric blockchain platform providing an intuitive development environment and friendly end-user experience. It is built upon solid reliability and significant stability with substantial service development for mass adoption.
             </div>
-            <div class="klaytn-learnmore"><a href="https://www.klaytn.com/" target="_blank">Learn More About Klaytn-></a></div>
+            <div class="klaytn-desc plain-text kr">
+                Klaytn은 사용자 친화적인 경험과 직관적인 개발환경을 제공하는 서비스 중심의 블록체인 플랫폼입니다. Klaytn은 세계적으로 명망있는 브랜드가 다수 참여하여 견고한 분산 신뢰시스템을 기반으로 신뢰할 수 있는 비즈니스 플랫폼을 구축하기 위해 함께 노력합니다. 
+            </div>
+            <div class="klaytn-learnmore">
+                <a href="https://www.klaytn.com/" target="_blank">
+                    <div class="en">   
+                        Learn More About Klaytn->
+                    </div>
+                    <div class="kr">   
+                        Klaytn에 대해 더 알아보기->
+                    </div>
+                </a>
+                </div>
         </div>
         <div class="page" id="Careers">
             <div class="mini-heading">Careers</div>
             <div class="heading-big">
-                <div class="bold">Discover how</div>
-                <div class="bold">you can make an impact.</div>
+                <div class="bold en">Discover how</div>
+                <div class="bold en">you can make an impact.</div>
             </div>
-            <div class="content-desc plain-text">
+            <div class="heading-big">
+                <div class="bold kr">새로운 세계로 향하는 도약,</div>
+                <div class="bold kr">당신의 도전을 기다립니다.</div>
+            </div>
+            <div class="content-desc plain-text en">
                 Join us at Krust.
+            </div>
+            <div class="button-main bold">
+                Careers >
+            </div>
+            <div class="plain-text">
+                <div class="en">
+                    For global position inquiries, email us
+                    <a style="color: #4D69E4; text-decoration: underline;" href="">here.</a>
+                </div>
+                <div class="kr">
+                    글로벌 포지션 지원자들은 이메일로 지원 바랍니다.
+                    <a style="color: #4D69E4; text-decoration: underline;" href="">바로가기.</a>
+                </div>
             </div>
         </div>
         <div class="page-long" id="Contact">
