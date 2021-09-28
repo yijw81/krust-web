@@ -383,7 +383,12 @@ a {
 #arrow-down {
     position: absolute;
     top: 90vh;
-    z-index:100;
+    z-index:99;
+}
+
+.paragraph {
+    margin-top: 1.5rem;
+    line-height: 1.6;
 }
 /*
 Extra small devices (phones, 600px and down)

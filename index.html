@@ -8,6 +8,43 @@
         <link rel="shortcut icon" type="image/jpg" href="./img/fav.png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
         <script>
+            window.addEventListener('scroll',
+                function() { 
+                    var scroll = window.scrollY;
+                    var height = window.innerHeight;
+                    var about = document.getElementById("menu-about");
+                    var klaytn = document.getElementById("menu-klaytn");
+                    var careers = document.getElementById("menu-careers");
+                    var contact = document.getElementById("menu-contact");
+                    if (scroll > 0 && scroll <= height * 3) {
+                        about.style.fontFamily = "Kakaosmallbold";
+                        klaytn.style.fontFamily = "Kakaosmalllight";
+                        careers.style.fontFamily = "Kakaosmalllight";
+                        contact.style.fontFamily = "Kakaosmalllight";
+                    } else if (scroll > height * 3 && scroll <= height * 4) {
+                        about.style.fontFamily = "Kakaosmalllight";
+                        klaytn.style.fontFamily = "Kakaosmallbold";
+                        careers.style.fontFamily = "Kakaosmalllight";
+                        contact.style.fontFamily = "Kakaosmalllight";
+                    } else if (scroll > height * 4 && scroll <= height * 5) {
+                        about.style.fontFamily = "Kakaosmalllight";
+                        klaytn.style.fontFamily = "Kakaosmalllight";
+                        careers.style.fontFamily = "Kakaosmallbold";
+                        contact.style.fontFamily = "Kakaosmalllight";
+                    } else if (scroll > height * 5 && scroll <= height * 7) {
+                        about.style.fontFamily = "Kakaosmalllight";
+                        klaytn.style.fontFamily = "Kakaosmalllight";
+                        careers.style.fontFamily = "Kakaosmalllight";
+                        contact.style.fontFamily = "Kakaosmallbold";
+                    } else {
+                        about.style.fontFamily = "Kakaosmalllight";
+                        klaytn.style.fontFamily = "Kakaosmalllight";
+                        careers.style.fontFamily = "Kakaosmalllight";
+                        contact.style.fontFamily = "Kakaosmalllight";
+                    }
+                }
+            ,false);
+
             function toggleMobileMenu() {
                 var x = document.getElementById("menu-mobile");
                 if (x.style.display === "flex") {
@@ -36,24 +73,30 @@
                 changeVisibility(from, "none");
             }
 
+            function changeStyle(_element, _selected) {
+                if (_selected) {
+                    _element.style.fontFamily = "Kakaosmallbold";
+                    _element.style.color = "white";
+                } else {
+                    _element.style.fontFamily = "Kakaosmalllight";
+                    _element.style.color = "#898989";
+                }
+            }
+
             function changeLangToEn() {
                 changeLang("kr", "en");
-                var kr = document.getElementById("lang-kr");
-                var en = document.getElementById("lang-en");
-                en.style.fontFamily = "Kakaosmallbold";
-                en.style.color = "white";
-                kr.style.fontFamily = "Kakaosmalllight";
-                kr.style.color = "#898989";
+                changeStyle(document.getElementById("lang-kr"), false);
+                changeStyle(document.getElementById("lang-kr-mobile"), false);
+                changeStyle(document.getElementById("lang-en"), true);
+                changeStyle(document.getElementById("lang-en-mobile"), true);
             }
 
             function changeLangToKr() {
                 changeLang("en", "kr");
-                var kr = document.getElementById("lang-kr");
-                var en = document.getElementById("lang-en");
-                kr.style.fontFamily = "Kakaosmallbold";
-                kr.style.color = "white";
-                en.style.fontFamily = "Kakaosmalllight";
-                en.style.color = "#898989";
+                changeStyle(document.getElementById("lang-kr"), true);
+                changeStyle(document.getElementById("lang-kr-mobile"), true);
+                changeStyle(document.getElementById("lang-en"), false);
+                changeStyle(document.getElementById("lang-en-mobile"), false);
             }
         </script>
     </head>
@@ -65,10 +108,10 @@
                 </a>
             </div>
             <div class="header-content" id="header-menu">
-                <a href="#About01"><h2>About</h2></a>
-                <a href="#Klaytn"><h2>Klaytn</h2></a>
-                <a href="#Careers"><h2>Careers</h2></a>
-                <a href="#Contact"><h2>Contact</h2></a>
+                <a href="#About01"><h2 id="menu-about">About</h2></a>
+                <a href="#Klaytn"><h2 id="menu-klaytn">Klaytn</h2></a>
+                <a href="#Careers"><h2 id="menu-careers">Careers</h2></a>
+                <a href="#Contact"><h2 id="menu-contact">Contact</h2></a>
             </div>
             <div class="header-content" id="header-lang">
                 <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
@@ -82,9 +125,9 @@
             </div>
             <div style="display:flex;">
                 <div style="margin-right: 1rem" id="header-lang">
-                    <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
+                    <div class="lang-button" id="lang-kr-mobile" style="color: #898989;" onclick="changeLangToKr()">KO</div>
                     <h5 style="margin:0.5rem;">|</h5>
-                    <div class="lang-button" id="lang-en" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
+                    <div class="lang-button" id="lang-en-mobile" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
                 </div>
                 <div id="header-menu-mobile" onclick="toggleMobileMenu()">
                     <span class="header-menu-mobile-bar"></span>
@@ -117,10 +160,10 @@
                 We incubate
                 <div class="bold">global services</div>
             </div>
-            <div class="content-desc plain-text en">
+            <div class="content-desc plain-text en paragraph">
                 Krust incubates innovative startups that are building the next generation of groundbreaking technology applications. By enabling their growth and supporting their global expansion, we aim to contribute to the innovation of humanity.
             </div>
-            <div class="content-desc plain-text kr">
+            <div class="content-desc plain-text kr paragraph">
                 Krust는 다음 세대의 획기적인 기술들을 이용한 어플리케이션을 만드는 혁신적인 스타트업들을 인큐베이팅 합니다. 이들의 성장과 글로벌 확장을 가능하게 함으로써 인류의 혁신에 기여하고자 합니다.
             </div>
         </div>
@@ -130,10 +173,10 @@
                 We invest in
                 <div class="bold">the future</div>
             </div>
-            <div class="content-desc plain-text en">
+            <div class="content-desc plain-text en paragraph">
                 Krust invests in early and growth stage startups with global potential. We look to not only invest but also create a partnership and facilitate the growth of these startups into world-class businesses.
             </div>
-            <div class="content-desc plain-text kr">
+            <div class="content-desc plain-text kr paragraph">
                 Krust는 글로벌 확장성의 잠재력을 갖춘 Early Stage와 Growth Stage의 스타트업을 발굴합니다. 우리는 투자뿐만 아니라 기업간의 파트너쉽을 영위하며 성장을 지원함으로써, 세계적 기업으로의 발돋움에 도움이 되고자 합니다.             
             </div>
         </div>
@@ -143,10 +186,10 @@
                 We invigorate the
                 <div class="bold">Klaytn ecosystem</div>
             </div>
-            <div class="content-desc plain-text en">
+            <div class="content-desc plain-text en paragraph">
                 Krust leads Kakao's global business with a focus on innovative technologies such as blockchain and artificial intelligence. We are working closely with the Klaytn Foundation in the blockchain sector and aim to expand the Klaytn ecosystem proactively and systematically.
             </div>
-            <div class="content-desc plain-text kr">
+            <div class="content-desc plain-text kr paragraph">
                 Krust는 카카오의 글로벌 비즈니스를 주도하며 블록체인, 인공지능 등의 혁신적인 기술에 중점을 두고 있습니다. 블록체인 부분에서는 Klaytn 재단과 긴밀한 관계를 유지하며 주도적이고 체계적으로 Klaytn 생태계를 확장하려 합니다.
             </div>
         </div>
@@ -155,13 +198,13 @@
             <div class="heading-big">
                 <div class="bold">What is Klaytn?</div>
             </div>
-            <div class="klaytn-desc plain-text en">
+            <div class="klaytn-desc plain-text en paragraph">
                 Klaytn is a service-centric blockchain platform providing an intuitive development environment and friendly end-user experience. It is built upon solid reliability and significant stability with substantial service development for mass adoption.
             </div>
-            <div class="klaytn-desc plain-text kr">
+            <div class="klaytn-desc plain-text kr paragraph">
                 Klaytn은 사용자 친화적인 경험과 직관적인 개발환경을 제공하는 서비스 중심의 블록체인 플랫폼입니다. Klaytn은 세계적으로 명망있는 브랜드가 다수 참여하여 견고한 분산 신뢰시스템을 기반으로 신뢰할 수 있는 비즈니스 플랫폼을 구축하기 위해 함께 노력합니다. 
             </div>
-            <div class="klaytn-learnmore">
+            <div class="klaytn-learnmore plain-text paragraph">
                 <a href="https://www.klaytn.com/" target="_blank">
                     <div class="en">   
                         Learn More About Klaytn->
@@ -174,11 +217,11 @@
         </div>
         <div class="page" id="Careers">
             <div class="mini-heading">Careers</div>
-            <div class="heading-big">
+            <div class="heading-med">
                 <div class="bold en">Discover how</div>
                 <div class="bold en">you can make an impact.</div>
             </div>
-            <div class="heading-big">
+            <div class="heading-med">
                 <div class="bold kr">새로운 세계로 향하는 도약,</div>
                 <div class="bold kr">당신의 도전을 기다립니다.</div>
             </div>
