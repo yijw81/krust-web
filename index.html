@@ -38,10 +38,22 @@
 
             function changeLangToEn() {
                 changeLang("kr", "en");
+                var kr = document.getElementById("lang-kr");
+                var en = document.getElementById("lang-en");
+                en.style.fontFamily = "Kakaosmallbold";
+                en.style.color = "white";
+                kr.style.fontFamily = "Kakaosmalllight";
+                kr.style.color = "#898989";
             }
 
             function changeLangToKr() {
                 changeLang("en", "kr");
+                var kr = document.getElementById("lang-kr");
+                var en = document.getElementById("lang-en");
+                kr.style.fontFamily = "Kakaosmallbold";
+                kr.style.color = "white";
+                en.style.fontFamily = "Kakaosmalllight";
+                en.style.color = "#898989";
             }
         </script>
     </head>
@@ -59,9 +71,9 @@
                 <a href="#Contact"><h2>Contact</h2></a>
             </div>
             <div class="header-content" id="header-lang">
-                <div class="lang-button" onclick="changeLangToKr()">KO</div>
-                <h5>|</h5>
-                <div class="lang-button" onclick="changeLangToEn()">EN</div>
+                <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
+                <h5 style="margin:0.5rem;">|</h5>
+                <div class="lang-button" id="lang-en" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
             </div>
         </div>
         <div id="header-mobile">
@@ -82,6 +94,7 @@
         </div>
         <div class="page" id="Krust">
             <!--<img style="height:100%;" src="img/Krust.gif"/>-->
+            <img id="arrow-down" src ="./img/arrow_down.png"/>
             <video class="vid-pc" height="100%" autoplay muted> 
                 <source src="./Krust_video-pc.mp4" type="video/mp4">
                 Please check your browser, your browser does not support the video tag.
@@ -165,10 +178,19 @@
             <div class="content-desc plain-text en">
                 Join us at Krust.
             </div>
-            <div class="button-main bold">
-                Careers >
+            <div style="display: flex; margin-top: 2rem;">
+                <a href="https://krustuniverse.recruiter.co.kr" target="_blank">
+                    <div class="button-main bold">
+                        Careers in KR >
+                    </div>
+                </a>
+                <a href="mailto:join@krustuniverse.com" target="_blank">
+                    <div class="button-main bold">
+                        Careers in SG >
+                    </div>
+                </a>
             </div>
-            <div class="plain-text">
+            <!--<div class="plain-text">
                 <div class="en">
                     For global position inquiries, email us
                     <a style="color: #4D69E4; text-decoration: underline;" href="">here.</a>
@@ -177,7 +199,7 @@
                     글로벌 포지션 지원자들은 이메일로 지원 바랍니다.
                     <a style="color: #4D69E4; text-decoration: underline;" href="">바로가기.</a>
                 </div>
-            </div>
+            </div>-->
         </div>
         <div class="page-long" id="Contact">
             <div class="mini-heading">Contact</div>
@@ -198,6 +220,24 @@
                 <div class="location-desc">
                     <img style="width:20px;" src="./img/locations/4-num.png"/>
                     <img style="width: 200px;" src="./img/locations/4-text.png"/>
+                </div>
+            </div>
+            <div style="margin-top: 6rem">
+                For general inquiries,
+            </div>
+            <div style="margin-bottom: 10rem">
+                <a class="bold" style="color: #4D69E4; text-decoration: underline;" href="">
+                info@krustuniverse.com
+                </a>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer-content">
+                <div>
+                    <img style="height:20px;" src="./img/Krust_Logotype_W.png"/>
+                </div>
+                <div style="color:#898989">
+                    © 2021 KRUST UNIVERSE, Inc. All rights reserved.
                 </div>
             </div>
         </div>

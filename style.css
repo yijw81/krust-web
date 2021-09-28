@@ -144,7 +144,7 @@ canvas {
 .page-long {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 120vh;
     width: 100vw;
     align-items: center;
     justify-content: center;
@@ -184,6 +184,16 @@ canvas {
     background-position: center;  
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#footer {
+    width: 100vw;
+    height: 160px;
+    box-shadow: 0 1px 0 #4B4B4B inset;
+    background-color: #1D1D1D;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 /* PAGE CONTENT */
@@ -230,6 +240,14 @@ canvas {
     display: none;
 }
 
+.footer-content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+}
+
 @media only screen and (max-width: 768px) {
     .page-long {
         height: auto;
@@ -257,6 +275,10 @@ canvas {
     .vid-mobile {
         display: block;
     }
+    .footer-content {
+        flex-direction: column;
+        width: 90%;
+    }    
 }
 
 /* FONT SIZES */
@@ -290,7 +312,7 @@ h2, h4, p, li{
 
 
 h2 {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 h5 {
@@ -326,7 +348,7 @@ a {
 .button-main {
     background-color:white;
     color: #4D69E4;
-    width: 150px;
+    width: 200px;
     height: 40px;
     display:flex;
     align-items: center;
@@ -344,6 +366,11 @@ a {
     display: block;
 }
 
+#arrow-down {
+    position: absolute;
+    top: 90vh;
+    z-index:100;
+}
 /*
 Extra small devices (phones, 600px and down)
 @media only screen and (max-width: 600px) {...}
