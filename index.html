@@ -80,10 +80,17 @@
             <div id="header-logo-mobile" onclick="closeMobileMenu()">
                 <a href="#Krust"><img style="height:28px;" src="./img/Krust_Logotype_W.png"/></a>
             </div>
-            <div id="header-menu-mobile" onclick="toggleMobileMenu()">
-                <span class="header-menu-mobile-bar"></span>
-                <span class="header-menu-mobile-bar"></span>
-                <span class="header-menu-mobile-bar"></span>
+            <div style="display:flex;">
+                <div style="margin-right: 1rem" id="header-lang">
+                    <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
+                    <h5 style="margin:0.5rem;">|</h5>
+                    <div class="lang-button" id="lang-en" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
+                </div>
+                <div id="header-menu-mobile" onclick="toggleMobileMenu()">
+                    <span class="header-menu-mobile-bar"></span>
+                    <span class="header-menu-mobile-bar"></span>
+                    <span class="header-menu-mobile-bar"></span>
+                </div>
             </div>
         </div>
         <div id="menu-mobile">
@@ -175,7 +182,7 @@
                 <div class="bold kr">새로운 세계로 향하는 도약,</div>
                 <div class="bold kr">당신의 도전을 기다립니다.</div>
             </div>
-            <div class="content-desc plain-text en">
+            <div class="content-desc plain-text-big en">
                 Join us at Krust.
             </div>
             <div class="button-group">
@@ -226,8 +233,8 @@
                 For general inquiries,
             </div>
             <div style="margin-bottom: 6rem">
-                <a class="bold" style="color: #4D69E4; text-decoration: underline;" href="">
-                info@krustuniverse.com
+                <a class="bold" style="color: #4D69E4; text-decoration: underline;" href="mailto:info@krustuniverse.com">
+                    info@krustuniverse.com
                 </a>
             </div>
         </div>
@@ -236,7 +243,7 @@
                 <div>
                     <img style="height:20px;" src="./img/Krust_Logotype_W.png"/>
                 </div>
-                <div style="color:#898989">
+                <div class="plain-text" style="color:#898989">
                     © 2021 KRUST UNIVERSE, Inc. All rights reserved.
                 </div>
             </div>
