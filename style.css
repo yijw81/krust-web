@@ -214,7 +214,7 @@ canvas {
 }
 
 .locations {
-    height: 40%;
+    width: 40%;
     margin: 5%;
 }
 
@@ -233,7 +233,12 @@ canvas {
 
 .vid-pc {
     display: block;
+}
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
 }
 
 .vid-mobile {
@@ -270,10 +275,12 @@ canvas {
     }
     .vid-pc {
         display: none;
-    
     }
     .vid-mobile {
         display: block;
+    }
+    .button-group{
+        flex-direction: column;
     }
     .footer-content {
         flex-direction: column;
@@ -300,6 +307,10 @@ canvas {
 
 .plain-text {
     font-size: 14px;
+}
+
+.plain-text-big {
+    font-size: 18px;
 }
 
 .bold {
@@ -334,6 +345,9 @@ a {
 @media only screen and (max-width: 768px) {
     .plain-text {
         font-size: 12px;
+    }
+    .plain-text-big {
+        font-size: 16px;
     }
     .heading-med {
         font-size: 30px;
