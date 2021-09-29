@@ -404,7 +404,9 @@ a {
 
 #arrow-down {
     position: absolute;
-    top: 90vh;
+    width: 36px;
+    left: calc(50vw - 18px);
+    top: 90vh;  
     z-index:99;
     cursor:pointer;
     -webkit-animation:animation-1l32y9a 2s infinite;
