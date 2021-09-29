@@ -45,13 +45,6 @@
                 }
             ,false);
 
-            let video = document.getElementById('vid-pc');
-            video.addEventListener('ended',myHandler,false);
-            function myHandler(e) {
-                console.log("video ended");
-                window.location.href = 'http://www.google.com';
-            }
-
             function toggleMobileMenu() {
                 var x = document.getElementById("menu-mobile");
                 if (x.style.display === "flex") {
@@ -152,7 +145,7 @@
         <div class="page" id="Krust">
             <!--<img style="height:100%;" src="img/Krust.gif"/>-->
             <a href="#About01"><img id="arrow-down" src ="./img/arrow_down.png"/></a>
-            <video id="vid-pc" height="100%" autoplay muted> 
+            <video id="vid-pc" height="100%" autoplay muted loop> 
                 <source src="./Krust_video-pc.mp4" type="video/mp4">
                 Please check your browser, your browser does not support the video tag.
             </video>
