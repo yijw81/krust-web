@@ -45,6 +45,15 @@
                 }
             ,false);
 
+            /*let video = document.getElementById('vid-pc');
+            console.log(video);
+            video.addEventListener('ended',myHandler,false);
+            function myHandler(e) {
+                // What you want to do after the event
+                console.log("video ended");
+                window.location.href = 'http://www.google.com';
+            }*/
+
             function toggleMobileMenu() {
                 var x = document.getElementById("menu-mobile");
                 if (x.style.display === "flex") {
@@ -145,11 +154,11 @@
         <div class="page" id="Krust">
             <!--<img style="height:100%;" src="img/Krust.gif"/>-->
             <a href="#About01"><img id="arrow-down" src ="./img/arrow_down.png"/></a>
-            <video class="vid-pc" height="100%" autoplay muted> 
+            <video id="vid-pc" height="100%" autoplay muted loop> 
                 <source src="./Krust_video-pc.mp4" type="video/mp4">
                 Please check your browser, your browser does not support the video tag.
             </video>
-            <video class="vid-mobile" height="100%" autoplay muted> 
+            <video id="vid-mobile" height="100%" playsinline autoplay muted loop> 
                 <source src="./Krust_video-m.mp4" type="video/mp4">
                 Please check your browser, your browser does not support the video tag.
             </video>
@@ -231,13 +240,26 @@
             <div class="button-group">
                 <a href="https://krustuniverse.recruiter.co.kr" target="_blank">
                     <div class="button-main bold">
-                        Careers in KR >
+                        <div class="en">
+                            Careers in Seoul Office
+                        </div>
+                        <div class="kr">
+                            채용중인 공고 보기
+                        </div>
+                        <img class="icon-blue" style="margin-left: 8px;" src="./img/icon-page.svg"/>
+                        <img class="icon-white" style="margin-left: 8px;" src="./img/icon-page-white.svg"/>
                     </div>
                 </a>
                 <a href="mailto:join@krustuniverse.com" target="_blank">
                     <div class="button-main bold">
-                        Global Careers 
-                        <img style="margin-left: 8px;" src="./img/email1.svg"/>
+                        <div class="en">
+                            Global Careers via email
+                        </div>
+                        <div class="kr">
+                            글로벌 채용 지원하기
+                        </div>
+                        <img class="icon-blue" style="margin-left: 8px;" src="./img/icon-mail.svg"/>
+                        <img class="icon-white" style="margin-left: 8px;" src="./img/icon-mail-white.svg"/>
                     </div>
                 </a>
             </div>
@@ -274,7 +296,12 @@
                 </div>
             </div>
             <div style="margin-top: 6rem">
-                For general inquiries,
+                <div class="en">
+                    For general inquiries,
+                </div>
+                <div class="kr">
+                    다른 문의 사항은 이메일로 연락 바랍니다.
+                </div>
             </div>
             <div style="margin-bottom: 6rem">
                 <a class="bold" style="color: #4D69E4; text-decoration: underline;" href="mailto:info@krustuniverse.com">
