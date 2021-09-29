@@ -273,10 +273,10 @@ canvas {
     .location-desc {
         margin:2rem;
     }
-    .vid-pc {
+    #vid-pc {
         display: none;
     }
-    .vid-mobile {
+    #vid-mobile {
         display: block;
     }
     .button-group{
