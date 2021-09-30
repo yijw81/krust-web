@@ -10,35 +10,35 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div id="header">
+        <div class="header-base header">
             <div class="header-content">
                 <a href="#Krust">
                     <img style="height:28px;" src="./img/Krust_Logotype_W.png"/>
                 </a>
             </div>
-            <div class="header-content" id="header-menu">
+            <div class="header-content plain-text">
                 <a href="#About01"><h2 id="menu-about">About</h2></a>
                 <a href="#Klaytn"><h2 id="menu-klaytn">Klaytn</h2></a>
                 <a href="#Careers"><h2 id="menu-careers">Careers</h2></a>
                 <a href="#Contact"><h2 id="menu-contact">Contact</h2></a>
             </div>
-            <div class="header-content" id="header-lang">
+            <div class="header-content">
                 <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
                 <h5 style="margin:0.5rem;">|</h5>
                 <div class="lang-button" id="lang-en" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
             </div>
         </div>
-        <div id="header-mobile">
-            <div id="header-logo-mobile" onclick="closeMobileMenu()">
+        <div class="header-base header-mobile">
+            <div style="margin-left: 2rem;" onclick="closeMobileMenu()">
                 <a href="#Krust"><img style="height:28px;" src="./img/Krust_Logotype_W.png"/></a>
             </div>
             <div style="display:flex;">
-                <div style="margin-right: 1rem" id="header-lang">
+                <div class="header-content-m plain-text">
                     <div class="lang-button" id="lang-kr-mobile" style="color: #898989;" onclick="changeLangToKr()">KO</div>
                     <h5 style="margin:0.5rem;">|</h5>
                     <div class="lang-button" id="lang-en-mobile" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
                 </div>
-                <div id="header-menu-mobile" onclick="toggleMobileMenu()">
+                <div class="header-menu-mobile" onclick="toggleMobileMenu()">
                     <span class="header-menu-mobile-bar"></span>
                     <span class="header-menu-mobile-bar"></span>
                     <span class="header-menu-mobile-bar"></span>
@@ -52,7 +52,6 @@
             <a href="#Contact"><h2 onclick="closeMobileMenu()">Contact</h2></a>
         </div>
         <div class="page" id="Krust">
-            <!--<img style="height:100%;" src="img/Krust.gif"/>-->
             <a href="#About01"><img id="arrow-down" src ="./img/arrow_down.png"/></a>
             <video id="vid-pc" height="100%" autoplay muted loop> 
                 <source src="./Krust_video-pc.mp4" type="video/mp4">
@@ -146,8 +145,8 @@
                         <div class="kr">
                             채용중인 공고 보기
                         </div>
-                        <img class="icon-blue" style="margin-left: 8px;" src="./img/icon-page.svg"/>
-                        <img class="icon-white" style="margin-left: 8px;" src="./img/icon-page-white.svg"/>
+                        <img class="icon-blue" src="./img/icon-page.svg"/>
+                        <img class="icon-white" src="./img/icon-page-white.svg"/>
                     </div>
                 </a>
                 <a href="mailto:join@krustuniverse.com" target="_blank">
@@ -158,8 +157,8 @@
                         <div class="kr">
                             글로벌 채용 지원하기
                         </div>
-                        <img class="icon-blue" style="margin-left: 8px;" src="./img/icon-mail.svg"/>
-                        <img class="icon-white" style="margin-left: 8px;" src="./img/icon-mail-white.svg"/>
+                        <img class="icon-blue" src="./img/icon-mail.svg"/>
+                        <img class="icon-white" src="./img/icon-mail-white.svg"/>
                     </div>
                 </a>
             </div>
@@ -169,20 +168,20 @@
             <img class="locations" src="./img/Locations.png"/>
             <div class="location-descriptions">
                 <div class="location-desc">
-                    <img style="width:20px;" src="./img/locations/1-num.png"/>
-                    <img style="width: 200px;" src="./img/locations/1-text.png"/>
+                    <img class="loc-num" src="./img/locations/1-num.png"/>
+                    <img class="loc-txt" src="./img/locations/1-text.png"/>
                 </div>
                 <div class="location-desc">
-                    <img style="width:20px;" src="./img/locations/2-num.png"/>
-                    <img style="width: 200px;" src="./img/locations/2-text.png"/>
+                    <img class="loc-num" src="./img/locations/2-num.png"/>
+                    <img class="loc-txt" src="./img/locations/2-text.png"/>
                 </div>
                 <div class="location-desc">
-                    <img style="width:20px;" src="./img/locations/3-num.png"/>
-                    <img style="width: 200px;" src="./img/locations/3-text.png"/>
+                    <img class="loc-num" src="./img/locations/3-num.png"/>
+                    <img class="loc-txt" src="./img/locations/3-text.png"/>
                 </div>
                 <div class="location-desc">
-                    <img style="width:20px;" src="./img/locations/4-num.png"/>
-                    <img style="width: 200px;" src="./img/locations/4-text.png"/>
+                    <img class="loc-num" src="./img/locations/4-num.png"/>
+                    <img class="loc-txt" src="./img/locations/4-text.png"/>
                 </div>
             </div>
             <div style="margin-top: 6rem">
