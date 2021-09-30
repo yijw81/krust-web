@@ -7,98 +7,7 @@
         <title>Krust</title>
         <link rel="shortcut icon" type="image/jpg" href="./img/fav.png"/>
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <script>
-            window.addEventListener('scroll',
-                function() { 
-                    var scroll = window.scrollY;
-                    var height = window.innerHeight;
-                    var about = document.getElementById("menu-about");
-                    var klaytn = document.getElementById("menu-klaytn");
-                    var careers = document.getElementById("menu-careers");
-                    var contact = document.getElementById("menu-contact");
-                    if (scroll > 0 && scroll <= height * 3) {
-                        about.style.fontFamily = "Kakaosmallbold";
-                        klaytn.style.fontFamily = "Kakaosmalllight";
-                        careers.style.fontFamily = "Kakaosmalllight";
-                        contact.style.fontFamily = "Kakaosmalllight";
-                    } else if (scroll > height * 3 && scroll <= height * 4) {
-                        about.style.fontFamily = "Kakaosmalllight";
-                        klaytn.style.fontFamily = "Kakaosmallbold";
-                        careers.style.fontFamily = "Kakaosmalllight";
-                        contact.style.fontFamily = "Kakaosmalllight";
-                    } else if (scroll > height * 4 && scroll <= height * 5) {
-                        about.style.fontFamily = "Kakaosmalllight";
-                        klaytn.style.fontFamily = "Kakaosmalllight";
-                        careers.style.fontFamily = "Kakaosmallbold";
-                        contact.style.fontFamily = "Kakaosmalllight";
-                    } else if (scroll > height * 5 && scroll <= height * 7) {
-                        about.style.fontFamily = "Kakaosmalllight";
-                        klaytn.style.fontFamily = "Kakaosmalllight";
-                        careers.style.fontFamily = "Kakaosmalllight";
-                        contact.style.fontFamily = "Kakaosmallbold";
-                    } else {
-                        about.style.fontFamily = "Kakaosmalllight";
-                        klaytn.style.fontFamily = "Kakaosmalllight";
-                        careers.style.fontFamily = "Kakaosmalllight";
-                        contact.style.fontFamily = "Kakaosmalllight";
-                    }
-                }
-            ,false);
-
-            function toggleMobileMenu() {
-                var x = document.getElementById("menu-mobile");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-            }
-            
-            function closeMobileMenu() {
-                var x = document.getElementById("menu-mobile");
-                x.style.display = "none";
-            }
-
-            function changeVisibility(_list, _str) {
-                for (var i = 0; i < _list.length; i++) {
-                    var x = _list.item(i);
-                    x.style.display = _str;
-                }
-            }
-
-            function changeLang(_langfrom, _langto) {
-                var from = document.getElementsByClassName(_langfrom);
-                var to = document.getElementsByClassName(_langto);
-                changeVisibility(to, "block");
-                changeVisibility(from, "none");
-            }
-
-            function changeStyle(_element, _selected) {
-                if (_selected) {
-                    _element.style.fontFamily = "Kakaosmallbold";
-                    _element.style.color = "white";
-                } else {
-                    _element.style.fontFamily = "Kakaosmalllight";
-                    _element.style.color = "#898989";
-                }
-            }
-
-            function changeLangToEn() {
-                changeLang("kr", "en");
-                changeStyle(document.getElementById("lang-kr"), false);
-                changeStyle(document.getElementById("lang-kr-mobile"), false);
-                changeStyle(document.getElementById("lang-en"), true);
-                changeStyle(document.getElementById("lang-en-mobile"), true);
-            }
-
-            function changeLangToKr() {
-                changeLang("en", "kr");
-                changeStyle(document.getElementById("lang-kr"), true);
-                changeStyle(document.getElementById("lang-kr-mobile"), true);
-                changeStyle(document.getElementById("lang-en"), false);
-                changeStyle(document.getElementById("lang-en-mobile"), false);
-            }
-        </script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div id="header">
@@ -254,16 +163,6 @@
                     </div>
                 </a>
             </div>
-            <!--<div class="plain-text">
-                <div class="en">
-                    For global position inquiries, email us
-                    <a style="color: #4D69E4; text-decoration: underline;" href="">here.</a>
-                </div>
-                <div class="kr">
-                    글로벌 포지션 지원자들은 이메일로 지원 바랍니다.
-                    <a style="color: #4D69E4; text-decoration: underline;" href="">바로가기.</a>
-                </div>
-            </div>-->
         </div>
         <div class="page-long" id="Contact">
             <div style="margin-top: 90px;" class="mini-heading">Contact</div>
