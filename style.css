@@ -31,6 +31,8 @@ body {
     color: white;
     text-align: center;
     overflow-x: hidden;
+    word-break: keep-all;
+    word-wrap: break-word;
 }
 
 canvas {
@@ -194,6 +196,10 @@ canvas {
 
 .klaytn-learnmore {
     color: #4D69E4;
+}
+
+.klaytn-learnmore:hover {
+    font-family: "Kakaosmallbold";
 }
 
 .locations {
