@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Kakaosmall";
-    src: url("./KakaoSmallOTF.otf") format("opentype");
+    src: url("./font/KakaoSmallOTF.otf") format("opentype");
 }
 @font-face {
     font-family: "Kakaosmalllight";
-    src: url("./KakaoSmallOTFLight.otf") format("opentype");
+    src: url("./font/KakaoSmallOTFLight.otf") format("opentype");
 }
 @font-face {
     font-family: "Kakaosmallbold";
-    src: url("./KakaoSmall\ OTF\ Bold.otf") format("opentype");
+    src: url("./font/KakaoSmall\ OTF\ Bold.otf") format("opentype");
 }
 
 * {
