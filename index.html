@@ -23,9 +23,9 @@
                 <a href="#Contact"><h2 id="menu-contact">Contact</h2></a>
             </div>
             <div class="header-content">
-                <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
-                <h5 style="margin:0.5rem;">|</h5>
                 <div class="lang-button" id="lang-en" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
+                <h5 style="margin:0.5rem;">|</h5>
+                <div class="lang-button" id="lang-kr" style="color: #898989;" onclick="changeLangToKr()">KO</div>
             </div>
         </div>
         <div class="header-base header-mobile">
@@ -34,9 +34,9 @@
             </div>
             <div style="display:flex;">
                 <div class="header-content-m plain-text">
-                    <div class="lang-button" id="lang-kr-mobile" style="color: #898989;" onclick="changeLangToKr()">KO</div>
-                    <h5 style="margin:0.5rem;">|</h5>
                     <div class="lang-button" id="lang-en-mobile" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
+                    <h5 style="margin:0.5rem;">|</h5>
+                    <div class="lang-button" id="lang-kr-mobile" style="color: #898989;" onclick="changeLangToKr()">KO</div>
                 </div>
                 <div class="header-menu-mobile" onclick="toggleMobileMenu()">
                     <span class="header-menu-mobile-bar"></span>
@@ -57,9 +57,9 @@
                 <source src="./vid/Krust_video-pc.mp4" type="video/mp4">
                 Please check your browser, your browser does not support the video tag.
             </video>
-            <video id="vid-mobile" height="100%" autoplay muted loop playsinline> 
+            <video id="vid-mobile" height="100%" poster="./vid/krust-m-frame1.png" autoplay muted loop playsinline webkit-playsinline> 
                 <source src="./vid/Krust_video-m.mp4" type="video/mp4">
-                Please check your browser, your browser does not support the video tag.
+                <img src="./vid/krust-m.gif"/>
             </video>
         </div>
         <div class="page" id="About01">
@@ -88,8 +88,8 @@
                 We look to not only invest but also create a partnership and facilitate the growth of these startups into world-class businesses.
             </div>
             <div class="content-desc plain-text kr paragraph">
-                Krust는 글로벌로 확장할 수 있는 잠재력을 가진 초기 성장단계의 스타트업을 발굴하여 투자합니다.
-                투자한 기업간의 파트너십을 구축하고 성장을 지원함으로써 세계적인 기업으로 발돋움하는 데에 보탬이 되고자 합니다.             
+                Krust는 글로벌로 확장할 수 있는 잠재력을 가진 초기 성장단계의 스타트업을 발굴하여 투자합니다. 
+                또한, 해당기업과 파트너십을 구축하고 성장을 지원함으로써 세계적인 기업으로 발돋움하는 데에 보탬이 되고자 합니다.
             </div>
         </div>
         <div class="page" id="About03">
@@ -173,7 +173,7 @@
             </div>
         </div>
         <div class="page-long" id="Contact">
-            <div style="margin-top: 90px;" class="mini-heading">Contact</div>
+            <div class="mini-heading">Contact</div>
             <img class="locations" src="./img/Frame.svg"/>
             <div class="location-descriptions">
                 <div class="location-desc">
@@ -188,32 +188,22 @@
                     <img class="loc-num" src="./img/locations/3-num.png"/>
                     <img class="loc-txt" src="./img/locations/3-text.png"/>
                 </div>
-                <!--<div class="location-desc">
-                    <img class="loc-num" src="./img/locations/4-num.png"/>
-                    <img class="loc-txt" src="./img/locations/4-text.png"/>
-                </div>-->
-            </div>
-            <div style="margin-top: 6rem">
-                <div class="en">
-                    For general inquiries,
-                </div>
-                <div class="kr">
-                    다른 문의 사항은 이메일로 연락 바랍니다.
-                </div>
-            </div>
-            <div style="margin-bottom: 6rem">
-                <a class="bold" style="color: #4D69E4; text-decoration: underline;" href="mailto:info@krustuniverse.com">
-                    info@krustuniverse.com
-                </a>
             </div>
         </div>
         <div id="footer">
             <div class="footer-content">
-                <div>
+                <div style="display: flex;">
                     <img style="height:20px;" src="./img/Krust_Logotype_W.png"/>
                 </div>
-                <div class="plain-text" style="color:#898989">
-                    © 2021 KRUST UNIVERSE, Inc. All rights reserved.
+                <div class="footer-right plain-text" style="color:#898989">
+                    For general inquiries
+                    <a class="bold" style="text-decoration: underline;" href="mailto:info@krustuniverse.com">
+                        info@krustuniverse.com
+                    </a>
+                    <br>
+                    <div class="plain-text" style="color:#898989"> 
+                        © 2021 KRUST UNIVERSE, Inc. All rights reserved.
+                    </div>
                 </div>
             </div>
         </div>
