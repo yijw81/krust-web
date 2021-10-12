@@ -270,6 +270,7 @@ canvas {
     }
     .location-descriptions {
         flex-direction: column;
+        align-items: flex-start;
     }
     .location-desc {
         margin:2rem;
