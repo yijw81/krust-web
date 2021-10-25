@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link rel="stylesheet" type="text/css" href="stylesheets/fullpage.css"/>
 
-  <!--  <script src="script.js"></script>-->
+    <script src="script.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 </head>
 <body>
@@ -24,10 +24,10 @@
       </a>
     </div>
     <div class="header-content plain-text">
-      <a href="#p1"><h2 id="menu-about">About</h2></a>
-      <a href="#p5"><h2 id="menu-klaytn">Klaytn</h2></a>
-      <a href="#p6"><h2 id="menu-careers">Careers</h2></a>
-      <a href="#p7"><h2 id="menu-contact">Contact</h2></a>
+      <a href="#p2"><h2 class="menu" id="menu-about">About</h2></a>
+      <a href="#p5"><h2 class="menu" id="menu-klaytn">Klaytn</h2></a>
+      <a href="#p6"><h2 class="menu" id="menu-careers">Careers</h2></a>
+      <a href="#p7"><h2 class="menu" id="menu-contact">Contact</h2></a>
     </div>
     <div class="header-content">
       <div class="lang-button" id="lang-en" style="font-family: 'Kakaosmallbold';"onclick="changeLangToEn()">EN</div>
@@ -53,7 +53,7 @@
     </div>
   </div>
   <div id="menu-mobile">
-    <a href="#p1"><h2 onclick="closeMobileMenu()">About</h2></a>
+    <a href="#p2"><h2 onclick="closeMobileMenu()">About</h2></a>
     <a href="#p5"><h2 onclick="closeMobileMenu()">Klaytn</h2></a>
     <a href="#p6"><h2 onclick="closeMobileMenu()">Careers</h2></a>
     <a href="#p7"><h2 onclick="closeMobileMenu()">Contact</h2></a>
@@ -251,7 +251,24 @@
     anchors: ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7'],
     licenseKey: 'AB03B124-B25549D5-B77EC6BC-4696502B',
     sectionsColor: ['#141312', '#141312', '#141312', '#141312', '#141312', '#141312', '#141312'],
-    scrollOverflow: true
+    scrollOverflow: true,
+    afterLoad: function(origin, destination, direction){
+      if(destination.index == 0){
+        document.getElementById('vid-pc').play();
+        document.getElementById('vid-mobile').play();
+      }
+
+      $(".menu").removeClass("active");
+      if (destination.index >= 1 && destination.index < 4) {
+        $("#menu-about").addClass("active");
+      } else if (destination.index == 4) {
+        $("#menu-klaytn").addClass("active");
+      } else if (destination.index == 5) {
+        $("#menu-careers").addClass("active");
+      } else if (destination.index == 6) {
+        $("#menu-contact").addClass("active");
+      }
+    }
   });
 </script>
 
