@@ -1,36 +1,3 @@
-window.addEventListener('scroll',
-    function() { 
-        var scroll = window.scrollY;
-        var height = window.innerHeight;
-        var menuitems = [
-            {elem : document.getElementById("menu-about")},
-            {elem : document.getElementById("menu-klaytn")},
-            {elem : document.getElementById("menu-careers")},
-            {elem : document.getElementById("menu-contact")}
-        ];
-        var idx = -1;
-        
-        if (scroll > 0 && scroll <= height * 3) {
-            idx = 0;
-        } else if (scroll > height * 3 && scroll <= height * 4) {
-            idx = 1;
-        } else if (scroll > height * 4 && scroll <= height * 5) {
-            idx = 2; 
-        } else if (scroll > height * 5 && scroll <= height * 7) {
-            idx = 3;
-        } else {
-            idx = -1;
-        }
-        for (var i = 0; i < menuitems.length; i++) {
-            if (i === idx) {
-                menuitems[i].elem.style.fontFamily = "Kakaosmallbold";
-            } else {
-                menuitems[i].elem.style.fontFamily = "Kakaosmalllight";
-            }
-        }
-    }
-,false);
-
 function toggleMobileMenu() {
     var x = document.getElementById("menu-mobile");
     if (x.style.display === "flex") {
